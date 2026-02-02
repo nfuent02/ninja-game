@@ -32,16 +32,23 @@ function drawPlatform(platformObject) {
 }
 
 function checkPlatform(t_platform) {
-
-	if(gameChar.pos[0] >= t_platform.boundariesX[0] && gameChar.pos[0] <= t_platform.boundariesX[1] && gameChar.pos[1] <= t_platform.pos[1]) {
-		platform_y_pos = t_platform.pos[1];
-		t_platform.isOverThisPlatform = true;
-		isOverPlatform = true;
-	} 
-	
-	if ((gameChar.pos[0] < t_platform.boundariesX[0] || gameChar.pos[0] > t_platform.boundariesX[1]) && t_platform.isOverThisPlatform){
-		platform_y_pos = 3/4 * height;
-		t_platform.isOverThisPlatform = false;
-		isOverPlatform = false;
-	}
+    // Detectar si el personaje está dentro de los límites X y por encima de la plataforma
+    if(gameChar.pos[0] >= t_platform.boundariesX[0] && 
+       gameChar.pos[0] <= t_platform.boundariesX[1] && 
+       gameChar.pos[1] <= t_platform.pos[1]) { 
+        
+        platform_y_pos = t_platform.pos[1];
+        t_platform.isOverThisPlatform = true;
+        gameChar.isOverPlatform = true; 
+    } 
+    
+    // Detectar si el personaje ha salido de los límites de ESTA plataforma específica
+    if ((gameChar.pos[0] < t_platform.boundariesX[0] || 
+         gameChar.pos[0] > t_platform.boundariesX[1]) && 
+         t_platform.isOverThisPlatform){
+        
+        platform_y_pos = floorPos_y; 
+        t_platform.isOverThisPlatform = false;
+        gameChar.isOverPlatform = false; 
+    }
 }

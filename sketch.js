@@ -64,7 +64,7 @@ function draw() {
 	translate(-cameraPosX, 0);
 
 	// Define a margin so objects don't "pop" into existence
-    let renderMargin = 200; 
+    let renderMargin = 2000; 
 
     // MOUNTAINS
     for (let i = 0; i < mountains.length; i++) {
@@ -108,18 +108,27 @@ function draw() {
             }
         }
     }
-    
+
     // CANYONS
     for (let i = 0; i < canyons.length; i++) {
-        // Only check canyon physics if close
-        if (dist(gameChar.pos[0], 0, canyons[i].pos[0], 0) < 150) {
-             checkCanyon(canyons[i]);
-        }
-        // Draw only if visible
-        if (canyons[i].pos[0] > cameraPosX - renderMargin && 
+
+        checkCanyon(canyons[i]);
+
+        // Comprobamos si el FINAL del cañón está a la derecha del borde izquierdo de la cámara
+        // Y si el PRINCIPIO del cañón está a la izquierda del borde derecho
+        if (canyons[i].pos[0] + canyons[i].size > cameraPosX - renderMargin && 
             canyons[i].pos[0] < cameraPosX + width + renderMargin) {
+            
             drawCanyon(canyons[i]);
         }
+    }
+
+	for (let i = 0; i < platforms.length; i++) {
+        // 1. Dibujar la plataforma pasando el objeto a la función
+        drawPlatform(platforms[i]);
+
+        // 2. Comprobar colisiones pasando el objeto a la función
+        checkPlatform(platforms[i]);
     }
     
     // ENEMIES 
@@ -187,12 +196,12 @@ function draw() {
 	// Logic to make the game character move or the background scroll.
 	if(gameChar.isLeft)
 	{
-		gameChar.pos[0] -= 20;
+		gameChar.pos[0] -= 22;
 	}
 
 	if(gameChar.isRight)
 	{
-		gameChar.pos[0]  += 20;
+		gameChar.pos[0]  += 22;
 	}
 
 	// Logic to make the game character rise and fall.
@@ -234,7 +243,7 @@ function draw() {
 	if (gameChar.isPlummeting) {
 		gameChar.isLeft = false;
 		gameChar.isRight = false;
-		gameChar.vel[1] += 4;
+		gameChar.vel[1] += 2;
 		gameChar.pos[1] += gameChar.vel[1];
 	}
 

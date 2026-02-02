@@ -15,17 +15,6 @@ function drawCanyon(t_canyon)
 	fill(lerpColor(color(23, 102, 98), color(224, 204, 158), 0.75));
 	rect(0, 0, 10 * t_canyon.size, h);
 
-/* 	for (let i = 0; i < h; i += 0.1) {
-
-		push();
-
-		stroke(lerpColor(color(124, 204, 158), color(155,0,0), i / h));
-		line(0, i, 10 * t_canyon.size, i);
-
-		pop();
-
-	} */
-
 	pop();
 }
 
