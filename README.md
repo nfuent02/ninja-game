@@ -3,6 +3,38 @@
 A classic side-scrolling platformer developed using the **p5.js** library. This project features custom physics, a dynamic camera system, and a unique atmosphere inspired by iconic gaming culture (including "Wasted" death screens and "Mission Passed" milestones).
 
 ⠀
+
+## 🚀 Getting Started
+
+You can play the game directly in your web browser without any installation:
+**[Play Ninja Game Live](https://nfuent02.github.io/ninja-game/)**
+
+
+
+
+### Controls
+* **Move Left**: `A` or `Left Arrow`
+* **Move Right**: `D` or `Right Arrow`
+* **Jump**: `W`, `Space`, or `Up Arrow`
+
+⠀
+
+### 💻 Local Installation
+If you prefer to run the project locally or modify the source code:
+
+1.  **Clone this repository**:
+
+    ```bash
+    git clone [https://github.com/nfuent02/ninja-game.git](https://github.com/nfuent02/ninja-game.git)
+    ```
+3.  **Open `index.html`** in a web browser.
+    * *Note: Using a local server (like VS Code Live Server) is recommended to avoid browser CORS issues with audio assets.*
+⠀
+⠀
+
+
+
+⠀
   
 ## 🎮 Game Overview
 
@@ -39,30 +71,6 @@ To ensure consistent gameplay across different hardware (preventing "speed-up" o
 ⠀
 ⠀
 
-## 🚀 Getting Started
-
-You can play the game directly in your web browser without any installation:
-**[Play Ninja Game Live](https://nfuent02.github.io/ninja-game/)**
-
-
-### 💻 Local Installation
-If you prefer to run the project locally or modify the source code:
-
-1.  **Clone this repository**:
-
-    ```bash
-    git clone [https://github.com/nfuent02/ninja-game.git](https://github.com/nfuent02/ninja-game.git)
-    ```
-3.  **Open `index.html`** in a web browser.
-    * *Note: Using a local server (like VS Code Live Server) is recommended to avoid browser CORS issues with audio assets.*
-⠀
-
-### Controls
-* **Move Left**: `A` or `Left Arrow`
-* **Move Right**: `D` or `Right Arrow`
-* **Jump**: `W`, `Space`, or `Up Arrow`
-
-⠀
 
 ## License
 This project is open-source and available under the MIT License.
