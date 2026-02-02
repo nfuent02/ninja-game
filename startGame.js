@@ -156,12 +156,12 @@ function startGame() {
 
 	enemies = [];
 
-	enemies.push(new Enemy(1600, floorPos_y,-7,250,random(10,40)));
-	enemies.push(new Enemy(1600, floorPos_y, 7,250,random(10,40)));
-	enemies.push(new Enemy(2800, floorPos_y,-6,200,random(10,40)));
-	enemies.push(new Enemy(2800, floorPos_y, 6,200,random(10,40)));
-	enemies.push(new Enemy(6650, 350, random(4,7),50,random(10,40)));
-	enemies.push(new Enemy(7525, 500, random(4,7),50,random(10,40)));
+	enemies.push(new Enemy(1600, floorPos_y,random(-2,-6),250,random(10,40)));
+	enemies.push(new Enemy(1600, floorPos_y, random(2,6),250,random(10,40)));
+	enemies.push(new Enemy(2800, floorPos_y,random(-2,-6),200,random(10,40)));
+	enemies.push(new Enemy(2800, floorPos_y, random(2,6),200,random(10,40)));
+	enemies.push(new Enemy(6650, 350, random(2,6),50,random(10,40)));
+	enemies.push(new Enemy(7525, 500, random(2,6),50,random(10,40)));
 	enemies.push(new Enemy(8150, floorPos_y, -8,100,random(10,40)));
 	enemies.push(new Enemy(8450, floorPos_y, -8,100,random(10,40))); 
 	enemies.push(new Enemy(8750, floorPos_y, -8,100,random(10,40))); 

@@ -187,12 +187,12 @@ function draw() {
 	// Logic to make the game character move or the background scroll.
 	if(gameChar.isLeft)
 	{
-		gameChar.pos[0] -= 10;
+		gameChar.pos[0] -= 20;
 	}
 
 	if(gameChar.isRight)
 	{
-		gameChar.pos[0]  += 10;
+		gameChar.pos[0]  += 20;
 	}
 
 	// Logic to make the game character rise and fall.
@@ -227,7 +227,7 @@ function draw() {
 
 	// Add gravity and update gameChar.pos[1] if character is in the air
 	if (gameChar.isFalling) {
-		gameChar.vel[1] += 1.7;
+		gameChar.vel[1] += 1.5;
 		gameChar.pos[1] += gameChar.vel[1];
 	} 
 	
