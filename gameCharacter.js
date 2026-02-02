@@ -1,17 +1,20 @@
 
 function checkPlayerDie() {
-	if (gameChar.isPlummeting && gameChar.pos[1] >= height + 10*gameChar.size) {
-			if(lives > 1) {
-				dyingSound.play();
-				startGame();
-			} else if (lives == 1) {
-				time = millis();
-				bgMusic.stop();
-				wastedSound.play(0,1,1,1.2,8);
-				cr7Sound.play(8);
-			}
-			lives -= 1;
-	}
+    if (gameChar.isPlummeting && gameChar.pos[1] >= height + 5 * gameChar.size) {
+            
+            if(lives > 1) {
+                dyingSound.play();
+                startGame();
+            } else if (lives == 1) {
+                time = millis();
+                bgMusic.stop();
+                wastedSound.play(0, 1, 1, 1.2, 8); 
+                
+                cr7Sound.play(8);
+            }
+            
+            lives -= 1;
+    }
 }
 
 // Function to draw the game character.
