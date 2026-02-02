@@ -1,6 +1,6 @@
 
 function checkPlayerDie() {
-    if (gameChar.isPlummeting && gameChar.pos[1] >= height + 0.5*gameChar.size) {
+    if (gameChar.isPlummeting && gameChar.pos[1] >= 2*height ) {
             
             if(lives > 1) {
                 dyingSound.play();

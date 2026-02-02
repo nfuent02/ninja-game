@@ -34,7 +34,7 @@ function preload() {
 
 function setup() {
     createCanvas(1024, 576);
-	frameRate(60);
+	frameRate(35);
     floorPos_y = height * 3/4;
     lives = 3;
 
