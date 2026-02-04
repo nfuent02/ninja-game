@@ -288,7 +288,7 @@ function keyReleased()
 	// Stops jumping if character hadn't finished jumping
 	if ((keyCode == 87 || keyCode == 32 || keyCode == 38) && gameChar.isFalling && gameChar.isJumping) {
 		gameChar.vel[1] = 0;
-		gameChar.isJumping = false;
+		gameChar.isJumping = false; 
 	}
 
 }
@@ -371,6 +371,7 @@ function drawGameOver() {
 
 	pop();
 }
+
 
 function drawLevelComplete() {
 	noLoop();
